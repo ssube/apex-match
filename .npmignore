@@ -1,0 +1,14 @@
+.nyc_output/
+config/
+node_modules/
+out/coverage/
+out/docs/
+out/*.html
+out/*.json
+out/test-*
+out/typings/
+src/
+test/
+Makefile
+tsconfig.json
+yarn.lock
