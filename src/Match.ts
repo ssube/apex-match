@@ -11,6 +11,7 @@ export type MatchErrorCallback = (error: MatchError) => void;
 
 export interface MatchOptions {
   errors: MatchErrorCallback;
+  path: Array<string>;
   strict: boolean;
 }
 

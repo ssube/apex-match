@@ -15,7 +15,7 @@ export interface Types extends Collections<any> {
   integer: number;
   string: string;
   // utility
-  error: string;
+  error: Error;
 }
 
 /**

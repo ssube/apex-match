@@ -72,7 +72,7 @@ export class ObjectMatch<T> extends Match<T> {
           errorHandler({
             match,
             msg: 'required is nil',
-            path: [key.toString()],
+            path: [...options.path, key.toString()],
             value: next,
           });
         }
@@ -81,7 +81,7 @@ export class ObjectMatch<T> extends Match<T> {
           errorHandler({
             match,
             msg: 'required does not match',
-            path: [key.toString()],
+            path: [...options.path, key.toString()],
             value: next,
           });
         }
@@ -90,7 +90,7 @@ export class ObjectMatch<T> extends Match<T> {
           errorHandler({
             match,
             msg: 'optional does not match',
-            path: [key.toString()],
+            path: [...options.path, key.toString()],
             value: next,
           });
         }
@@ -104,7 +104,7 @@ export class ObjectMatch<T> extends Match<T> {
           errorHandler({
             match: this,
             msg: 'additional field not allowed',
-            path: [key],
+            path: [...options.path, key],
             value: value[key],
           });
         }
